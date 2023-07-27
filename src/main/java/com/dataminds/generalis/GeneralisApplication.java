@@ -10,23 +10,19 @@ import org.thymeleaf.util.StringUtils;
 
 import java.util.Locale;
 
-
 @SpringBootApplication
 public class GeneralisApplication {
-
 	public static void main(String[] args) {
-//		SpringApplication.run(GeneralisApplication.class, args);
-//		Test test = new Test();
-//		System.out.print(test.getTest());
+		SpringApplication.run(GeneralisApplication.class, args);
 	}
 
-	@Controller
-	public class GettingController {
-		@RequestMapping(value="/greeting")
-		public String requestGetting(@RequestParam(name="name", required = false, defaultValue = "Word") String name, Model model){
-			model.addAttribute("name", StringUtils.toUpperCase(name, Locale.ENGLISH));
-			return "greeting";
-		}
-	}
+//	@Controller
+//	public class GettingController {
+//		@RequestMapping(value="/greeting")
+//		public String requestGetting(@RequestParam(name="name", required = false, defaultValue = "Word") String name, Model model){
+//			model.addAttribute("name", StringUtils.toUpperCase(name, Locale.ENGLISH));
+//			return "greeting";
+//		}
+//	}
 }
 
